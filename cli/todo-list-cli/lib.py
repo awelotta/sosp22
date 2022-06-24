@@ -9,14 +9,14 @@ def menu():
     clean(DONE_PATH)
     clean(TODO_PATH)
     with open(TODO_PATH, 'r') as f: todo_len = len(f.read())
-    with done(TODO_PATH, 'r') as f: done_len = len(f.read())
+    with open(DONE_PATH, 'r') as f: done_len = len(f.read())
     choice = qy.select(
         "Menu",
         choices = [
             'add tasks',
-            qy.Choice("browse todo list and complete tasks",   disabled="todo list is currently empty" if todo_len == 0 else None, value='browse todo'),
-            qy.Choice("browse todo list and reorder tasks",    disabled="todo list is currently empty" if todo_len == 0 else None, value='reorder todo'),
-            qy.Choice("browse done list and uncomplete tasks", disabled="done list is currently empty" if done_len == 0 else None, value='browse done'),
+            qy.Choice("browse todo list and complete tasks",   disabled="!! todo list is currently empty" if todo_len == 0 else None, value='browse todo'),
+            qy.Choice("browse todo list and reorder tasks",    disabled="!! todo list is currently empty" if todo_len == 0 else None, value='reorder todo'),
+            qy.Choice("browse done list and uncomplete tasks", disabled="!! done list is currently empty" if done_len == 0 else None, value='browse done'),
             'quit'
         ]
     ).ask()
