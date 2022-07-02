@@ -110,4 +110,9 @@ def clean(file):
     data = [x for x in data if x and not x.isspace()]
     output = '\n'.join(data)
     with open(file, 'w') as f: f.write(output)
-    
+
+def print_todo():
+    with open(TODO_PATH, 'r') as f: print(f.read())
+
+def print_done():
+    with open(DONE_PATH, 'r') as f: print(f.read())

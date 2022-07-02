@@ -1,1 +1,11 @@
 pygame
+itertools
+functools
+collections
+statistics
+network
+operator
+enum
+iteration_utilities
+pickle
+socket
