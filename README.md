@@ -4,3 +4,5 @@ Repository containing my projects for Summer of Side Projects 2022, hosted by fo
 My Discord bot project is in `discord-bot`
 
 My CLI project is in `cli/todo-list-cli`
+
+My PyGame project is in `pygame-project/type-fighters`
